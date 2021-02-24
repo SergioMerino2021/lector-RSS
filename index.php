@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/rss.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Lector de feeds</title>
 </head>
 <body>
@@ -46,21 +47,30 @@
             $description = $item->description;
             $postDate = $item->pubDate;
             $pubDate = date('D, d M Y',strtotime($postDate));
+            
             if($i>=5) break; //5 es el número de noticias a mostrar
     
             //Mostramos información por pantalla de la noticia
-            echo '<div>';
-            echo '<div>';
-            //Título de la noticia
-            echo '<h2><a href="'.$link.'">'.$title.'</a></h2>';
-            echo '<span>'.$pubDate.'</span>';
-            echo '</div>';
-            //Cuerpo de la noticia
-            echo '<div>';
-            //echo implode(' ', array_slice(explode(' ', $description), 0, 20)) . "...";
-            echo '<div>'.$description.'</div>';
-            echo '<a href="'.$link.'">Leer más</a>';
-            echo '</div>';
+            echo '<div class="four-column">';
+                //echo '<div class="description">'.$description.'</div>';
+                echo '<div class="center">';
+                    echo '<div class="text">';
+                //Título de la noticia
+                        echo '<h3 class="title">'.$title.'</h3>';
+                        
+                        echo '<br>';
+                        echo '<span>'.$pubDate.'</span>';
+                    //echo '</div>';
+                    //Cuerpo de la noticia
+                    //echo '<div>';
+                        $text= implode(' ', array_slice(explode(' ', $description), 0, 50)) . " ...";
+                        
+                        echo '<div class="noneImg">'.$text.'</div>';
+                        
+                        echo '<br>';
+                        echo '<a class="link" href="'.$link.'">READ MORE ></a>';
+                    echo '</div>';
+                echo '</div>';
             echo '</div>';
             $i++;
         }

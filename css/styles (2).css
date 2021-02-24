@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-image: url('../img/banner-1.jpg');
+    background-size: cover;
+    /*tamaño de foto*/
+    /*background-attachment: fixed;*/
+    /*fondo fijo*/
+    padding: 25px 25px;
+    text-align: center;
+    color: black;
+    font-size: 55px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.one-column {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    /*padding: 20% 20%;*/
+    /*=> "padding:0% 20% 0% 20%"*/
+}
+
+.two-column {
+    padding: 20px;
+    float: left;
+    width: 50%;
+}
+
+.two-column img {
+    width: 100%;
+}
+
+.size p {
+    font-size: 3vw;
+}
+
+.size h1 {
+    font-size: 6vw;
+}
+
+.four-column {
+    padding: 20px;
+    float: left;
+    width: 25%;
+}
+
+.four-column img {
+    width: 100%;
+}
+
+.four-column p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.row h1 {
+    font-size: 70px;
+}
+
+.titulo {
+    padding-top: 20px;
+    /*font-size: 95px;*/
+    text-align: center;
+}
+
+.pading {
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-bottom: 2%;
+}
+
+.sinPading {
+    padding: 0%;
+}
+
+.sinPading2 {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-top: -5px;
+}
+
+.footer {
+    color: white;
+    background-color: black;
+}
+
+#color1 {
+    background-color: #28ECA5;
+}
+
+#color2 {
+    background-color: #46A6FC;
+    margin-top: -5px;
+}
+
+#titulo2 {
+    /*font-size: 70px;*/
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.footer-column {
+    width: 50%;
+    float: left;
+}
+
+@media screen and (max-width:700px) {
+    .four-column {
+        width: 50%;
+    }
+    .two-column {
+        width: 100%;
+    }
+}
